@@ -1,0 +1,95 @@
+# =============================================================================
+# Dot Engine .gitignore
+# =============================================================================
+
+# Build directories
+build/
+build_*/
+install/
+out/
+cmake-build-*/
+msbuild_debug/
+codex_backups/
+Assets/
+
+# IDE files
+.vs/
+.vscode/
+.idea/
+.VSCodeCounter/
+node_modules/
+*.suo
+*.user
+*.sln.docstates
+
+# Compiled objects
+*.obj
+*.o
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+*.exe
+*.pdb
+*.ilk
+*.exp
+!Assets/**/*.obj
+!Game/**/*.obj
+
+# CMake generated
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
+CTestTestfile.cmake
+Testing/
+Makefile
+*.cmake
+
+# Visual Studio
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+x64/
+Debug/
+Release/
+
+# Precompiled headers
+*.pch
+*.gch
+
+# Logs
+*.log
+build_error.txt
+build_errors*.txt
+build_log*.txt
+build_output.txt
+error.txt
+errors.txt
+test_output.txt
+
+# Temporary files
+*.tmp
+*.temp
+*~
+plan.txt
+imgui.ini
+_fix_*.ps1
+
+# Local docs generated during Codex work
+docs/superpowers/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Package files
+*.pak
+*.zip
+*.tar.gz
+
+# Keep ThirdParty folder structure
+!ThirdParty/.gitkeep
+!Tools/.gitkeep

@@ -1,0 +1,95 @@
+# Dot Engine Code Style
+# Based on LLVM style with engine-specific modifications
+---
+Language: Cpp
+BasedOnStyle: LLVM
+
+# Indentation
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+IndentCaseLabels: true
+IndentPPDirectives: BeforeHash
+NamespaceIndentation: None
+
+# Braces
+BreakBeforeBraces: Allman
+Cpp11BracedListStyle: true
+
+# Line Length
+ColumnLimit: 120
+
+# Alignment
+AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+AlignOperands: true
+AlignTrailingComments: true
+
+# Short statements
+AllowShortBlocksOnASingleLine: Empty
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AllowShortLambdasOnASingleLine: All
+
+# Pointers and References
+PointerAlignment: Left
+ReferenceAlignment: Left
+DerivePointerAlignment: false
+
+# Includes
+IncludeBlocks: Regroup
+IncludeCategories:
+  # PCH header first
+  - Regex:           '^".*PCH\.h"'
+    Priority:        -1
+  # Engine core headers
+  - Regex:           '^"Core/.*"'
+    Priority:        1
+  # Engine runtime headers  
+  - Regex:           '^"Runtime/.*"'
+    Priority:        2
+  # Engine platform headers
+  - Regex:           '^"Platform/.*"'
+    Priority:        3
+  # Other project headers
+  - Regex:           '^".*"'
+    Priority:        4
+  # System/third-party headers
+  - Regex:           '^<.*>'
+    Priority:        5
+SortIncludes: CaseSensitive
+
+# Spacing
+SpaceAfterCStyleCast: false
+SpaceAfterLogicalNot: false
+SpaceAfterTemplateKeyword: true
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCpp11BracedList: false
+SpaceBeforeParens: ControlStatements
+SpaceInEmptyBlock: false
+SpaceInEmptyParentheses: false
+SpacesInAngles: Never
+SpacesInCStyleCastParentheses: false
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+
+# Other
+AccessModifierOffset: -4
+BinPackArguments: true
+BinPackParameters: true
+BreakConstructorInitializers: BeforeColon
+BreakInheritanceList: BeforeColon
+CompactNamespaces: false
+ConstructorInitializerIndentWidth: 4
+ContinuationIndentWidth: 4
+FixNamespaceComments: true
+MaxEmptyLinesToKeep: 1
+ReflowComments: true
+SortUsingDeclarations: true
+
+# Modern C++ features
+Standard: c++20
+...
